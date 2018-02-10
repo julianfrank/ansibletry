@@ -1,0 +1,16 @@
+---
+  - name: Install ansible on master
+    hosts: all
+    become: true
+
+    tasks:
+
+      - name: Install python
+        apt:
+          name: python
+          state: present
+
+      #- name: Install ansible
+        #apt:
+          #name: ansible
+          #state: present

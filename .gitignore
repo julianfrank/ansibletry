@@ -51,3 +51,4 @@ build-iPhoneSimulator/
 
 *.log
 .vagrant
+*.retry

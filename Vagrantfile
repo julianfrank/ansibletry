@@ -10,7 +10,11 @@ Vagrant.configure("2") do |config|
   config.vm.define "master" do |subconfig|     
     subconfig.vm.box = BOX_IMAGE     
     subconfig.vm.hostname = "master"     
-    subconfig.vm.network :private_network, ip: "10.0.0.10"   
+    subconfig.vm.network :private_network, ip: "10.0.0.10"
+    # Run Ansible from the Vagrant VM
+    subconfig.vm.provision "ansible_local" do |ansible|
+      ansible.playbook = "master.yml"
+    end
   end     
   
   (1..NODE_COUNT).each do |i|     
