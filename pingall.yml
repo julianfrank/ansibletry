@@ -1,0 +1,11 @@
+---
+- name: Ping all Hosts
+  hosts: all
+  become: yes
+
+  tasks:
+
+    - name: ping
+      apt:
+        name: ping
+        state: present

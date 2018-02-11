@@ -51,9 +51,6 @@ Vagrant.configure("2") do |config|
     #v.name = v.hostname
     v.memory = 666
     v.cpus = 1
+    v.customize ["modifyvm", :id, "--cpuexecutioncap", "25"]
   end
-  # Install avahi on all machines     
-  #config.vm.provision "shell", inline: <<-SHELL     
-    #apt-get install -y avahi-daemon libnss-mdns   
-  #SHELL 
 end
