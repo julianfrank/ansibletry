@@ -1,0 +1,10 @@
+master.mylab.local
+    
+[web]
+node[1:2].mylab.local
+    
+[app]
+node[3:4].mylab.local
+    
+[db]
+node[5:6].mylab.local
