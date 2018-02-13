@@ -1,6 +1,5 @@
 ---
 - name: Ping all Hosts
-  hosts: all
   become: yes
 
   tasks:
